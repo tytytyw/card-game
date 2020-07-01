@@ -206,7 +206,6 @@ img {
 	        transform: translateY(-5%) rotate(-3.08deg);
 	-webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 	        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-	
 }
 
 .flip-card-front_over:hover {
@@ -283,6 +282,14 @@ img[src="img/cartback.svg"], .flip-card-inner, .flip-card-front {
 		    -ms-flex-align: center;
 		        align-items: center;
 		padding-right: 0;
+	}
+	.flip-card-front:hover {
+	cursor: pointer;
+	-webkit-transform: translateY(-5%) rotate(-3.08deg);
+	    -ms-transform: translateY(-5%) rotate(-3.08deg);
+	        transform: translateY(-5%) rotate(-3.08deg);
+	-webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+	        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
 	}
 	.level__btn{
 		margin-bottom: 40px;
