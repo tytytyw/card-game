@@ -1,25 +1,25 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	color: #fff;
 }
-body{
+body {
 	background: url(img/background.png);
 	background-size: cover;
 	height: 100vh;
 	font-family: 'Roboco', sans-serif;
 	font-weight: bold;
 }
-.level{
+.level {
 	padding: 4em 0 0 4em;
 }
-.level__title{
+.level__title {
 	font-size: 57px;
 }
-.level__subtitle{
+.level__subtitle {
 	font-size: 19px;
 }
-.level__selector{
+.level__selector {
 	margin-top: 3em;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -32,17 +32,17 @@ body{
 }
 .level__easy,
 .level__medium,
-.level__hard{
+.level__hard {
 	display: inline-block;
 	font-size: 50px;
 	margin-top: 2rem;
 	margin-left: 20px;
 	cursor: pointer;
 }
-.level__active_svg{
+.level__active_svg {
 	fill:none;
 }
-.level__check{
+.level__check {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -53,24 +53,24 @@ body{
 	-o-transition: all ease .2s;
 	transition: all ease .2s;
 }
-.level__svg{
+.level__svg {
 	margin-right: 15px;
 }
-.level__checked rect{
+.level__checked rect {
 	fill: #D62B2E;
 }
-.level__check:hover rect{
+.level__check:hover rect {
 	fill: #D62B2E;
 }
-.level__check:hover .level__text{
+.level__check:hover .level__text {
 	opacity: .8;
 }
-.level__check:hover{
+.level__check:hover {
 	-webkit-transform: scale(1.035);
 	    -ms-transform: scale(1.035);
 	        transform: scale(1.035);
 }
-.level__cards{
+.level__cards {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -82,17 +82,17 @@ body{
 	        align-items: center;
 	padding-right: 150px;
 }
-.level__cards_left{
+.level__cards_left {
 	-webkit-transform: rotate(11.9deg);
 	    -ms-transform: rotate(11.9deg);
 	        transform: rotate(11.9deg);
 }
-.level__cards_right{
+.level__cards_right {
 	-webkit-transform: rotate(39.26deg);
 	    -ms-transform: rotate(39.26deg);
 	        transform: rotate(39.26deg);
 }
-.level__btn{
+.level__btn {
 	font-family: 'Roboco', sans-serif;
 	font-size: 32px;
 	width: 352px;
@@ -102,11 +102,11 @@ body{
 	cursor: pointer;
 	border: 1px solid #fff;
 }
-.level__btn:hover{
+.level__btn:hover {
 	background: red;
 	border-radius: 7px;
 }
-.level__btn:active{
+.level__btn:active {
 	-webkit-transition: all ease .5s;
 	-o-transition: all ease .5s;
 	transition: all ease .5s;
@@ -117,16 +117,16 @@ body{
 	-webkit-box-shadow: 0px 0px 2px 5px black;
 	        box-shadow: 0px 0px 2px 5px black;
 }
-.hiden{
+.hiden {
 	display: none;
 }
-.nonOpacity{
+.nonOpacity {
 	opacity: 0;
 	-webkit-transition: all ease 1s;
 	-o-transition: all ease 1s;
 	transition: all ease 1s;
 }
-#card_area{
+#card_area {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -150,7 +150,7 @@ body{
   	margin-right: 24px;
  	margin-bottom: 24px;
 }
-img{
+img {
 	width: 218px;
 	height: 341px;
 }
@@ -181,6 +181,11 @@ img{
 .flip-card-front {
 	background-color: transparent;
 	color: black;
+	-webkit-transition: -webkit-transform .9s ease;
+	transition: -webkit-transform .9s ease;
+	-o-transition: transform .9s ease;
+	transition: transform .9s ease;
+	transition: transform .9s ease, -webkit-transform .9s ease
 }
 .flip-card-back {
 	background: url(img/cardback.png);
@@ -194,21 +199,29 @@ img{
 	-webkit-transform: rotateY(180deg);
 	        transform: rotateY(180deg);
 }
-.flip-card-front:hover{
+.flip-card-front:hover {
 	cursor: pointer;
 	-webkit-transform: translateY(-5%) rotate(-3.08deg);
 	    -ms-transform: translateY(-5%) rotate(-3.08deg);
 	        transform: translateY(-5%) rotate(-3.08deg);
 	-webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 	        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-	-webkit-transition: -webkit-transform .9s ease;
-	transition: -webkit-transform .9s ease;
-	-o-transition: transform .9s ease;
-	transition: transform .9s ease;
-	transition: transform .9s ease, -webkit-transform .9s ease
+	
 }
 
-@-webkit-keyframes opac{
+.flip-card-front_over:hover {
+	cursor: pointer;
+	-webkit-transform: translateY(0) rotate(0);
+	    -ms-transform: translateY(0) rotate(0);
+	        transform: translateY(0) rotate(0);
+	        -webkit-box-shadow: none;
+	        box-shadow: none;
+}
+.flip-card-back:hover {
+	cursor: pointer;
+}
+
+@-webkit-keyframes opac {
 	from{
 		opacity: 0;
 	}
@@ -217,7 +230,7 @@ img{
 	}
 }
 
-@keyframes opac{
+@keyframes opac {
 	from{
 		opacity: 0;
 	}
@@ -225,6 +238,7 @@ img{
 		opacity: 1;
 	}
 }
+
 
 @media (max-width: 1120px) {
 	.level__logo > img {

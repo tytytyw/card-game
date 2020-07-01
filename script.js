@@ -1,33 +1,34 @@
-const a = document.querySelector(".level__easy"),
-      b = document.querySelector(".level__medium"),
-      c = document.querySelector(".level__hard"),
+const easy = document.querySelector(".level__easy"),
+      medium = document.querySelector(".level__medium"),
+      hard = document.querySelector(".level__hard"),
       btn = document.querySelector(".level__btn"),
-      levelMenu = document.querySelector(".level");
+      levelMenu = document.querySelector(".level")
+      content = '<div class="flip-card-inner"><div class="flip-card-front"><img src="img/cartback.svg"></div><div class="flip-card-back"></div></div>';
 let level,
-	r,
-	div;
-const ar = '<div class="flip-card-inner"><div class="flip-card-front"><img src="img/cartback.svg"></div><div class="flip-card-back"></div></div>';
+	random,
+	div,
+    cardIsFlip = false;
 function Random(min, max) {
-  return r = Math.floor(Math.random() * (max - min)) + min;
+    return random = Math.floor(Math.random() * (max - min)) + min;
 };
-a.onclick = () => {
-	a.classList.add('level__checked')
-	b.classList.remove('level__checked')
-	c.classList.remove('level__checked')
+easy.onclick = () => {
+	easy.classList.add('level__checked')
+	medium.classList.remove('level__checked')
+	hard.classList.remove('level__checked')
 	btn.innerHTML = 'Начать Игру'
 	level = 3
 };
-b.onclick = () => {
-	b.classList.add('level__checked')
-	a.classList.remove('level__checked')
-	c.classList.remove('level__checked')
+medium.onclick = () => {
+	medium.classList.add('level__checked')
+	easy.classList.remove('level__checked')
+	hard.classList.remove('level__checked')
 	btn.innerHTML = 'Начать Игру'
     level = 6
 };
-c.onclick = () => {
-	c.classList.add('level__checked')
-	b.classList.remove('level__checked')
-	a.classList.remove('level__checked')
+hard.onclick = () => {
+	hard.classList.add('level__checked')
+	medium.classList.remove('level__checked')
+	easy.classList.remove('level__checked')
 	btn.innerHTML = 'Начать Игру'
 	level = 10
 };
@@ -39,34 +40,43 @@ btn.onclick = () => {
     	}, 1000)
     setTimeout(() => {
     	document.body.innerHTML = '<div id="card_area"></div>'
-    	let el = document.querySelector('#card_area');
+    	let cardArea = document.querySelector('#card_area');
     	for (let i = 0; i < level; i++) {
     		if (level / i == 2) {
     			let br = document.createElement('br')
-    			el.appendChild(br);
+    			cardArea.appendChild(br);
     		}
     	div = document.createElement('div');
-    	div.innerHTML = ar;
-    	el.appendChild(div);
+    	div.innerHTML = content;
+    	cardArea.appendChild(div);
     	div.className = 'flip-card'
     	}
-    	let flip =  el.querySelectorAll('.flip-card');
-    	flip.innerHTML = ar;
-    	let flipInner =  el.querySelectorAll('.flip-card-inner');
+    	let flip =  cardArea.querySelectorAll('.flip-card');
+    	flip.innerHTML = content;
+    	let flipInner =  cardArea.querySelectorAll('.flip-card-inner');
     	Random(0, level);
-    	console.log('Баг под картой '+(r+1));
-    	flipInner[r].querySelector('.flip-card-back').classList.add('bag')
+    	flipInner[random].querySelector('.flip-card-back').classList.add('bag')
     	for (let p = 0; p < level; p++){
     		flip[p].onclick = () => {
-    			flip[p].querySelector('.flip-card-inner').classList.add('active');
-    			setTimeout(() => {document.body.onclick = () => window.location.reload()}, 300);
-    		}
+
+                if (cardIsFlip !== true) {
+                flip[p].querySelector('.flip-card-inner').classList.add('active');
+                cardIsFlip = true;
+                }
+
+                document.querySelectorAll('.flip-card-front').forEach(function (item) {
+                    item.classList.add('flip-card-front_over')
+                });
+    			setTimeout(() => {document.body.onclick = () => {
+                    setTimeout(() => window.location.reload(), 700);
+                    document.body.classList.add('nonOpacity');
+                }
+            }, 300)};
     	}
     }, 100)
 }
 	else{
 		btn.innerHTML = 'Выберите уровень'
 	}
-
 }
 
