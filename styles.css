@@ -1,0 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+body{
+	background: url(img/background.png);
+	background-size: cover;
+	height: 100vh;
+	font-family: 'Roboco', sans-serif;
+	font-weight: bold;
+}
+.level{
+	padding: 4em 0 0 4em;
+}
+.level__title{
+	font-size: 57px;
+}
+.level__subtitle{
+	font-size: 19px;
+}
+.level__selector{
+	margin-top: 3em;
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+}
+.level__easy,
+.level__medium,
+.level__hard{
+	display: inline-block;
+	font-size: 50px;
+	margin-top: 2rem;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.level__active_svg{
+	fill:none;
+}
+.level__check{
+	display: flex;
+	align-items: center;
+	transition: all ease .2s;
+}
+.level__svg{
+	margin-right: 15px;
+}
+.level__checked rect{
+	fill: #D62B2E;
+}
+.level__check:hover rect{
+	fill: #D62B2E;
+}
+.level__check:hover .level__text{
+	opacity: .8;
+}
+.level__check:hover{
+	transform: scale(1.035);
+}
+.level__cards{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 150px;
+}
+.level__cards_left{
+	transform: rotate(11.9deg);
+}
+.level__cards_right{
+	transform: rotate(39.26deg);
+}
+.level__btn{
+	font-family: 'Roboco', sans-serif;
+	font-size: 32px;
+	width: 352px;
+	height: 95px;
+	background: #D62B2E;
+	border-radius: 7px;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+.level__btn:hover{
+	background: red;
+	border-radius: 7px;
+}
+.level__btn:active{
+	transition: all ease .5s;
+	transform: scale(0.95);
+	border: none;
+	box-shadow: 0px 0px 2px 5px black;
+}
+.hiden{
+	display: none;
+}
+.nonOpacity{
+	opacity: 0;
+	transition: all ease 1s;
+}
+#card_area{
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	animation: 	opac ease 1.5s
+}
+.flip-card {
+	display: inline-block;
+  	background-color: transparent;
+	width: 214px;
+    height: 336px;
+    perspective: 1000px;
+  	margin-right: 24px;
+ 	margin-bottom: 24px;
+}
+img{
+	width: 218px;
+	height: 341px;
+}
+.flip-card-inner {
+    position: relative;
+  	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.active {
+ 	transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.flip-card-front {
+	background-color: transparent;
+	color: black;
+}
+.flip-card-back {
+	background: url(img/cardback.png);
+	color: white;
+	transform: rotateY(180deg);
+}
+.bag {
+	background: url(img/cardbag.png);
+	color: white;
+	transform: rotateY(180deg);
+}
+.flip-card-front:hover{
+	cursor: pointer;
+	transform: translateY(-5%) rotate(-3.08deg);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	transition: transform .9s ease
+}
+
+@keyframes opac{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}

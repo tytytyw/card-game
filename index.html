@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<title>find bag Game</title>
+</head>
+<body>
+	<div class="level">
+		<h1 class="level__title">Выберите уровень сложности:</h1>
+		<h5 class="level__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</h5>
+		<div class="level__selector">
+			<div class="level__easy level__check">
+				<svg class='level__svg' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect class='level__active_svg' x="12.728" width="18" height="18" transform="rotate(45 12.728 0)" fill="#D62B2E"/>
+				</svg>
+				<span class="level__text">Простой</span>
+			</div>
+			<div class="level__medium level__check">
+				<svg class='level__svg' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect class='level__active_svg' x="12.728" width="18" height="18" transform="rotate(45 12.728 0)" fill="#D62B2E"/>
+				</svg>
+				<span class="level__text">Средний</span>
+			</div>
+			<div class="level__hard level__check">
+				<svg class='level__svg' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect class='level__active_svg' x="12.728" width="18" height="18" transform="rotate(45 12.728 0)" fill="#D62B2E"/>
+				</svg>
+				<span class="level__text">Сложный</span>
+			</div>
+		</div>
+		<div class="level__cards">
+			<button class="level__btn">Начать Игру</button>
+			<div>
+				<img class='level__cards_left' src="img/cartback.svg" alt="card">
+				<img class='level__cards_right' src="img/cartback.svg" alt="card">
+			</div>
+		</div>
+	</div>
+	<!-- <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="img/cartback.svg"></div><div class="flip-card-back"></div></div></div> -->
+<script src="script.js"></script>
+</body>
+</html>
