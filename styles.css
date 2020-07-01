@@ -4,7 +4,7 @@
 	color: #fff;
 }
 body {
-	background: url(img/background.png);
+	background: url(img/background.jpg);
 	background-size: cover;
 	height: 100vh;
 	font-family: 'Roboco', sans-serif;
@@ -383,3 +383,4 @@ img[src="img/cartback.svg"], .flip-card-inner, .flip-card-front {
     border-radius: 8px;
 	}
 }
+    
