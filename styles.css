@@ -220,6 +220,11 @@ img {
 .flip-card-back:hover {
 	cursor: pointer;
 }
+.flip-card, .flip-card, .flip-card-back,
+img[src="img/cartback.svg"] {
+	border-radius: 15px;
+}
+
 
 @-webkit-keyframes opac {
 	from{
