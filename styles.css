@@ -21,8 +21,13 @@ body{
 }
 .level__selector{
 	margin-top: 3em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	max-width: 300px;
 }
 .level__easy,
@@ -38,8 +43,14 @@ body{
 	fill:none;
 }
 .level__check{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transition: all ease .2s;
+	-o-transition: all ease .2s;
 	transition: all ease .2s;
 }
 .level__svg{
@@ -55,19 +66,31 @@ body{
 	opacity: .8;
 }
 .level__check:hover{
-	transform: scale(1.035);
+	-webkit-transform: scale(1.035);
+	    -ms-transform: scale(1.035);
+	        transform: scale(1.035);
 }
 .level__cards{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding-right: 150px;
 }
 .level__cards_left{
-	transform: rotate(11.9deg);
+	-webkit-transform: rotate(11.9deg);
+	    -ms-transform: rotate(11.9deg);
+	        transform: rotate(11.9deg);
 }
 .level__cards_right{
-	transform: rotate(39.26deg);
+	-webkit-transform: rotate(39.26deg);
+	    -ms-transform: rotate(39.26deg);
+	        transform: rotate(39.26deg);
 }
 .level__btn{
 	font-family: 'Roboco', sans-serif;
@@ -84,33 +107,46 @@ body{
 	border-radius: 7px;
 }
 .level__btn:active{
+	-webkit-transition: all ease .5s;
+	-o-transition: all ease .5s;
 	transition: all ease .5s;
-	transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	    -ms-transform: scale(0.95);
+	        transform: scale(0.95);
 	border: none;
-	box-shadow: 0px 0px 2px 5px black;
+	-webkit-box-shadow: 0px 0px 2px 5px black;
+	        box-shadow: 0px 0px 2px 5px black;
 }
 .hiden{
 	display: none;
 }
 .nonOpacity{
 	opacity: 0;
+	-webkit-transition: all ease 1s;
+	-o-transition: all ease 1s;
 	transition: all ease 1s;
 }
 #card_area{
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	text-align: center;
-	animation: 	opac ease 1.5s
+	-webkit-animation: 	opac ease 1.5s;
+	        animation: 	opac ease 1.5s
 }
 .flip-card {
 	display: inline-block;
   	background-color: transparent;
 	width: 214px;
     height: 336px;
-    perspective: 1000px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
   	margin-right: 24px;
  	margin-bottom: 24px;
 }
@@ -123,17 +159,24 @@ img{
   	width: 100%;
 	height: 100%;
 	text-align: center;
+	-webkit-transition: -webkit-transform 0.8s;
+	transition: -webkit-transform 0.8s;
+	-o-transition: transform 0.8s;
 	transition: transform 0.8s;
-	transform-style: preserve-3d;
+	transition: transform 0.8s, -webkit-transform 0.8s;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
 }
 .active {
- 	transform: rotateY(180deg);
+ 	-webkit-transform: rotateY(180deg);
+ 	        transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 }
 .flip-card-front {
 	background-color: transparent;
@@ -142,18 +185,36 @@ img{
 .flip-card-back {
 	background: url(img/cardback.png);
 	color: white;
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
 }
 .bag {
 	background: url(img/cardbag.png);
 	color: white;
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
 }
 .flip-card-front:hover{
 	cursor: pointer;
-	transform: translateY(-5%) rotate(-3.08deg);
-	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-	transition: transform .9s ease
+	-webkit-transform: translateY(-5%) rotate(-3.08deg);
+	    -ms-transform: translateY(-5%) rotate(-3.08deg);
+	        transform: translateY(-5%) rotate(-3.08deg);
+	-webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	-webkit-transition: -webkit-transform .9s ease;
+	transition: -webkit-transform .9s ease;
+	-o-transition: transform .9s ease;
+	transition: transform .9s ease;
+	transition: transform .9s ease, -webkit-transform .9s ease
+}
+
+@-webkit-keyframes opac{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
 
 @keyframes opac{
@@ -195,8 +256,13 @@ img{
     	margin-bottom: 3em;
 	}
 	.level__cards{
-		flex-direction: column;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		padding-right: 0;
 	}
 	.level__btn{
@@ -268,7 +334,7 @@ img{
 	.level__subtitle {
     	font-size: 15px;
 	}
-	}
+}
 @media (max-width: 340px) {
 	.flip-card, .flip-card, .flip-card-back, img[src="img/cartback.svg"] {
     	width: 60px;
@@ -279,5 +345,4 @@ img{
 	.level {
 		padding: 1em 0 0 1em;
 	}
-	
 }
