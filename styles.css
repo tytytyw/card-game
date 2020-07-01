@@ -221,7 +221,7 @@ img {
 	cursor: pointer;
 }
 .flip-card, .flip-card, .flip-card-back,
-img[src="img/cartback.svg"] {
+img[src="img/cartback.svg"], .flip-card-inner, .flip-card-front {
 	border-radius: 15px;
 }
 
@@ -245,7 +245,7 @@ img[src="img/cartback.svg"] {
 }
 
 
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
 	.level__logo > img {
 		width: 20vw;
 		height: auto;

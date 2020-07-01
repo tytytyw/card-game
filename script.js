@@ -42,10 +42,14 @@ btn.onclick = () => {
     	document.body.innerHTML = '<div id="card_area"></div>'
     	let cardArea = document.querySelector('#card_area');
     	for (let i = 0; i < level; i++) {
-    		if (level / i == 2) {
+    		if (level / i == 2 && window.innerWidth > 650 && level == 10) {
     			let br = document.createElement('br')
     			cardArea.appendChild(br);
     		}
+            if (level / i == 2 && level !== 10) {
+                let br = document.createElement('br')
+                cardArea.appendChild(br);
+            }
     	div = document.createElement('div');
     	div.innerHTML = content;
     	cardArea.appendChild(div);
