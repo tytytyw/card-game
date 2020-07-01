@@ -164,3 +164,120 @@ img{
 		opacity: 1;
 	}
 }
+
+@media (max-width: 1120px) {
+	.level__logo > img {
+		width: 20vw;
+		height: auto;
+	}
+	.level__cards {
+		padding-right: 100px;
+	}
+	.flip-card, .flip-card, .flip-card-back, img[src="img/cartback.svg"] {
+    	width: 120px;
+    	height: 186px;
+    	background-size: contain;
+	}
+}
+@media (max-width: 960px) {
+	.level__logo > img {
+		width: 15vw;
+	}
+	.level__title {
+    	margin-bottom: 20px;
+	}
+	.level__subtitle {
+    	padding-right: 55px;
+	}
+}
+@media (max-width: 800px) {
+	.level__selector {
+    	margin-bottom: 3em;
+	}
+	.level__cards{
+		flex-direction: column;
+		align-items: center;
+		padding-right: 0;
+	}
+	.level__btn{
+		margin-bottom: 40px;
+	}
+	.level__selector{
+		margin: 2em auto;
+	}
+	.level__logo {
+		padding-right: 20px;
+	}
+	.level {
+    	padding: 1em 1em 0 1em;
+	}
+	.level__selector > div {
+		margin-left: 0;
+	}
+	.flip-card, .flip-card, .flip-card-back, img[src="img/cartback.svg"] {
+    	width: 100px;
+    	height: 155px;
+    	background-size: contain;
+	}
+	.flip-card {
+		margin: 15px;
+	}
+}
+@media (max-width: 420px) {
+	.level__title {
+    	font-size: 45px;
+	}
+	.level__selector {
+    	margin: 30px auto;
+    }
+    .level__selector > div {
+    	font-size: 35px;
+    }
+    .level__btn {
+    	width: 90%;
+    	margin-bottom: 0;
+    }
+    .level__logo {
+    	display: none;
+    }
+    .level__cards {
+    	height: 100px;
+    }
+    .level__subtitle {
+    	padding: 0;
+    }
+    .level__easy, .level__medium, .level__hard {
+		margin-top: 2rem;
+    }
+    .flip-card, .flip-card, .flip-card-back, img[src="img/cartback.svg"] {
+    	width: 80px;
+    	height: 124px;
+	}
+}
+@media (max-width: 320px) {
+	.level__selector {
+    	margin: 0 auto 25px auto;
+	}
+	.level__btn {
+    	margin-bottom: 0;
+	}
+	.level__title {
+   		font-size: 40px;
+   		margin-bottom: 10px;
+	}
+	.level__subtitle {
+    	font-size: 15px;
+	}
+	}
+@media (max-width: 340px) {
+	.flip-card, .flip-card, .flip-card-back, img[src="img/cartback.svg"] {
+    	width: 60px;
+    	height: 93px;
+	}
+}
+@media (max-height: 770px) {
+	.level {
+		padding: 1em 0 0 1em;
+	}
+	
+}
